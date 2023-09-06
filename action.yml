@@ -38,7 +38,7 @@ runs:
       uses: dtolnay/rust-toolchain@stable
 
     - name: Install Kani
-      run: ${{ github.action_path }}/src/install-kani.sh {{ inputs.kani-version }}
+      run: ${{ github.action_path }}/src/install-kani.sh ${{ inputs.kani-version }}
       shell: bash
 
     - name: Install PropProof

@@ -39,10 +39,7 @@ runs:
 
     - name: Install Kani
       shell: bash
-      run: |
-        cd "$GITHUB_ENV"
-        ls
-        ./install-kani.sh {{ inputs.kani-version }}
+      run: sh src/install-kani.sh {{ inputs.kani-version }}
 
     - name: Install PropProof
       if: ${{ inputs.enable-propproof == 'true' }}
